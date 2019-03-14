@@ -19,7 +19,8 @@ editor_options:
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
-<!---------slide 1-------->
+
+<!---------Introduction to topic-------->
 ---
 class: center
 # Background & Introduction
@@ -31,7 +32,9 @@ class: center
 knitr::include_graphics("images/Figure1.png")
 ```
 ]
-<!---------slide 2-------->
+<!-------------------------------->
+
+<!---------intro to theory-------->
 ---
 class: center
 # Background & Introduction
@@ -51,7 +54,9 @@ Del Giudice, M., Ellis, B. J., & Shirtcliff, E. A. (2011). The Adaptive Calibrat
 .font80[
 *"The central concept of the ACM is that information encoded by the SRS in the course of development feeds back on the long-term calibration of the system itself, resulting in adaptive patterns of responsivity and individual differences in life history-related behavior."*
 ]
-<!---------slide 2B-------->
+<!------------------------------->
+
+<!---------zoom on theory-------->
 ---
 class: center
 # Background & Introduction
@@ -61,7 +66,9 @@ class: center
 knitr::include_graphics("images/ACM.png")
 ```
 ]
-<!---------slide 3-------->
+<!-------------------------------->
+
+<!---------overview of SRS-------->
 ---
 class: center
 # Background & Introduction
@@ -69,7 +76,9 @@ class: center
 ```{r echo = FALSE, out.width = "70%"}
 knitr::include_graphics("images/SRS1.svg")
 ```
-<!---------slide 4-------->
+<!----------------------------->
+
+<!---------focus on HPA-------->
 ---
 class: center
 # Background & Introduction
@@ -77,7 +86,9 @@ class: center
 ```{r echo = FALSE, out.width = "700px"}
 knitr::include_graphics("images/HPA.svg")
 ```
-<!---------slide 5-------->
+<!----------------------------------->
+
+<!---------reminder of theory-------->
 ---
 class: center
 # Background & Introduction
@@ -85,7 +96,9 @@ class: center
 ```{r echo = FALSE, out.width = "100%"}
 knitr::include_graphics("images/ACM.png")
 ```
-<!---------slide 6-------->
+<!-------------------------------------->
+
+<!---------focus on sex hormones-------->
 ---
 class: center
 # Background & Introduction
@@ -93,7 +106,9 @@ class: center
 ```{r echo = FALSE, out.width = "700px"}
 knitr::include_graphics("images/SRS_HPA_SexHormones.svg")
 ```
-<!---------slide 7-------->
+<!--------------------------------------------------->
+
+<!---------sex and stress hormone interaction-------->
 ---
 class: center
 # Background & Introduction
@@ -101,10 +116,11 @@ class: center
 ```{r echo = FALSE, out.width = "700px"}
 knitr::include_graphics("images/AcrossBetween.svg")
 ```
-<!---------slide 8-------->
+<!----------------------------------->
+
+<!---------research questions-------->
 ---
 # Background & Introduction
-
 .pull-left[
   .center[
 ## What?
@@ -119,7 +135,9 @@ knitr::include_graphics("images/AcrossBetween.svg")
 ]
   ]
   
-<!---------slide 9-------->
+<!---------------------------------->
+
+<!---------consider behavior-------->
 ---
 class: center, middle
 # Background & Introduction
@@ -127,12 +145,67 @@ class: center, middle
 ```{r echo = FALSE, out.width = "700px"}
 knitr::include_graphics("images/profiles.png")
 ```
-<!---------slide 10-------->
+<!----------------------------------->
+
+<!---------Transition to Data-------->
 ---
 class: inverse, center, middle
 # Empirical Support
+<!-------------------------------------------->
 
-<!---------slide 11-------->
+<!---------Investigation Overview base-------->
+---
+class: center
+# Empirical Support
+## Overview
+```{r echo = FALSE, out.width = "80%"}
+knitr::include_graphics("images/Overview_base.svg")
+```
+<!---------------------------------------------->
+
+<!---------Investigation Overview medium-------->
+---
+class: center
+# Empirical Support
+## Overview
+```{r echo = FALSE, out.width = "70%"}
+knitr::include_graphics("images/Overview_medium.svg")
+```
+<!-------------------------------------------->
+
+<!---------Investigation Overview full-------->
+---
+class: center
+# Empirical Support
+## Overview
+```{r echo = FALSE, out.width = "70%"}
+knitr::include_graphics("images/Overview_full.svg")
+```
+<!-------------------------------------------->
+
+<!---------Investigation Overview HPA-------->
+---
+class: center
+# Empirical Support
+## Overview
+.middle[
+```{r echo = FALSE, out.width = "70%"}
+knitr::include_graphics("images/Overview_HPA.svg")
+```
+]
+<!-------------------------------------------->
+
+<!------Investigation Overview Gostisha------->
+---
+class: center
+# Empirical Support
+## Overview
+```{r echo = FALSE, out.width = "70%"}
+knitr::include_graphics("images/Overview_Gostisha.svg")
+```
+<!------------------------------>
+
+<!---------MJTC Overview-------->
 ---
 class: center
 # Empirical Support
@@ -140,7 +213,9 @@ class: center
 ```{r echo = FALSE, out.width = "80%"}
 knitr::include_graphics("images/MJTC_base.svg")
 ```
-<!---------slide 12-------->
+<!-------------------------------->
+
+<!---------MJTC Gostisha 1-------->
 ---
 class: center
 # Empirical Support
@@ -148,7 +223,9 @@ class: center
 ```{r echo = FALSE, out.width = "80%"}
 knitr::include_graphics("images/MJTC_1.svg")
 ```
-<!---------slide 13-------->
+<!-------------------------------->
+
+<!---------MJTC Gostisha 2-------->
 ---
 class: center
 # Empirical Support
@@ -156,7 +233,301 @@ class: center
 ```{r echo = FALSE, out.width = "80%"}
 knitr::include_graphics("images/MJTC_2.svg")
 ```
-<!---------slide END-------->
+<!--------------------------------------->
+
+<!------Investigation Overview IDS------->
+---
+class: center
+# Empirical Support
+## Overview
+```{r echo = FALSE, out.width = "70%"}
+knitr::include_graphics("images/Overview_IDS.svg")
+```
+<!------------------------------>
+
+<!------Introduce IDS------->
+---
+class: center
+# Empirical Support
+## Overview
+```{r echo = FALSE, out.width = "70%"}
+knitr::include_graphics("images/IDS flow.svg")
+```
+<!------------------------------>
+
+<!---------IDS Findings 1-------->
+---
+class: center
+# Empirical Support
+## Infant Development Study
+
+```{r include=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(psych)
+library(reshape2)
+library(ggplot2)
+library(wesanderson)
+library(ggthemes)
+x1<-read_csv("/home/andrewdismukes/SpiderOak Hive/Analysis/Analysis_IDS_2016_Longitudinal_Cortisol_Race/IDS_Longitudinal_Cortisol_Analyses/Databases_IDS/IDSLongitudinal/IDS_Cortisol_3_15_17.csv")
+
+#rename the cort variables                                       
+x1$Cort1<-x1$cortisol_conc1_4
+x1$Cort2<-x1$cortisol_conc2_4
+x1$Cort3<-x1$cortisol_conc3_4
+x1$Cort4<-x1$cortisol_conc1_12
+x1$Cort5<-x1$cortisol_conc3_12
+x1$Cort6<-x1$cortisol_conc3_12_1
+
+DF.Cort<-x1[, c("subject", "Cort1", "Cort2", "Cort3", "Cort4", "Cort5", "Cort6")]
+rm(x1)
+#get rid of drastic outliers and 999's
+DF.Cort$Cort1[DF.Cort$Cort1>=10]<-NA      
+DF.Cort$Cort2[DF.Cort$Cort2>=10]<-NA 
+DF.Cort$Cort3[DF.Cort$Cort3>=10]<-NA
+DF.Cort$Cort4[DF.Cort$Cort4>=10]<-NA
+DF.Cort$Cort5[DF.Cort$Cort5>=10]<-NA
+DF.Cort$Cort6[DF.Cort$Cort6>=10]<-NA
+
+#move any value at 0 up slightly so it returns a meaningful log
+DF.Cort$Cort1[DF.Cort$Cort1<=0.01]<-0.01
+DF.Cort$Cort2[DF.Cort$Cort2<=0.01]<-0.01
+DF.Cort$Cort3[DF.Cort$Cort3<=0.01]<-0.01
+DF.Cort$Cort4[DF.Cort$Cort4<=0.01]<-0.01
+DF.Cort$Cort5[DF.Cort$Cort5<=0.01]<-0.01
+DF.Cort$Cort6[DF.Cort$Cort6<=0.01]<-0.01
+
+#pull the outliers in
+m1<-mean(DF.Cort$Cort1, na.rm=TRUE) + 3*sd(DF.Cort$Cort1, na.rm=TRUE)
+DF.Cort$Cort1[DF.Cort$Cort1>m1]<-m1
+m2<-mean(DF.Cort$Cort2, na.rm=TRUE) + 3*sd(DF.Cort$Cort2, na.rm=TRUE)
+DF.Cort$Cort2[DF.Cort$Cort2>m2]<-m2
+m3<-mean(DF.Cort$Cort3, na.rm=TRUE) + 3*sd(DF.Cort$Cort3, na.rm=TRUE)
+DF.Cort$Cort3[DF.Cort$Cort3>m3]<-m3
+m4<-mean(DF.Cort$Cort4, na.rm=TRUE) + 3*sd(DF.Cort$Cort4, na.rm=TRUE)
+DF.Cort$Cort4[DF.Cort$Cort4>m4]<-m4
+m5<-mean(DF.Cort$Cort5, na.rm=TRUE) + 3*sd(DF.Cort$Cort5, na.rm=TRUE)
+DF.Cort$Cort5[DF.Cort$Cort5>m5]<-m5
+m6<-mean(DF.Cort$Cort6, na.rm=TRUE) + 3*sd(DF.Cort$Cort6, na.rm=TRUE)
+DF.Cort$Cort6[DF.Cort$Cort6>m6]<-m6
+
+#set length
+DF.Cort$Cort1<-round(DF.Cort$Cort1, digits=5)
+DF.Cort$Cort2<-round(DF.Cort$Cort2, digits=5)
+DF.Cort$Cort3<-round(DF.Cort$Cort3, digits=5)
+DF.Cort$Cort4<-round(DF.Cort$Cort4, digits=5)
+DF.Cort$Cort5<-round(DF.Cort$Cort5, digits=5)
+DF.Cort$Cort6<-round(DF.Cort$Cort6, digits=5)
+
+#Create log transformed Variables
+DF.Cort$LnCort1<-log(DF.Cort$Cort1)+5
+DF.Cort$LnCort2<-log(DF.Cort$Cort2)+5
+DF.Cort$LnCort3<-log(DF.Cort$Cort3)+5
+DF.Cort$LnCort4<-log(DF.Cort$Cort4)+5
+DF.Cort$LnCort5<-log(DF.Cort$Cort5)+5
+DF.Cort$LnCort6<-log(DF.Cort$Cort6)+5
+
+#subset into clean cortisol dtabase
+Df.cort<-select(DF.Cort, subject, LnCort1:LnCort6)
+
+#Convert to long form
+DF.cort.DF<-as.data.frame(Df.cort)
+mdata<-melt(DF.cort.DF, id=c("subject"))
+mdata$Cortisol<-mdata$value
+mdata$value<-NULL
+S<-mdata
+S[,2] <- ifelse(S[,2] == "LnCort1", 1, ifelse(S[,2] == "LnCort2", 2, ifelse(S[,2] == "LnCort3", 3, ifelse(S[,2] == "LnCort4", 4, ifelse(S[,2] == "LnCort5", 5, ifelse(S[,2] == "LnCort6", 6, 99))))))
+S$Time<-S$variable
+S$variable<-NULL
+S$Condition[S$Time<4]<-'SF'
+S$Condition[S$Time>3]<-'SSP'
+Final <- S
+Final$Time[Final$Time==4] <- 1
+Final$Time[Final$Time==5] <- 2
+Final$Time[Final$Time==6] <- 3
+Final<-as_tibble(Final)
+rm(DF.Cort)
+rm(DF.cort)
+rm(S)
+rm(mdata)
+#Bring in level 2
+ULSS<-read_csv("/home/andrewdismukes/SpiderOak Hive/Analysis/Analysis_IDS_2016_Longitudinal_Cortisol_Race/IDS_Longitudinal_Cortisol_Analyses/Databases_IDS/IDSLongitudinal/IDSULSS.csv")
+L2<-read_csv("/home/andrewdismukes/SpiderOak Hive/Analysis/Analysis_IDS_2016_Longitudinal_Cortisol_Race/IDS_Longitudinal_Cortisol_Analyses/Databases_IDS/IDSLongitudinal//IDS_Covariates_6_7_17.csv")
+x2<-merge(ULSS, L2, 'subject')
+rm(ULSS)
+rm(L2)
+#Merge
+Long_full<-merge(Final, x2, 'subject')
+Wide_full<- merge(x2, DF.cort.DF, "subject")
+rm(Final)
+rm(DF.cort.DF)
+#
+xxx1<-as_tibble(Long_full)
+xxx1$DEMOGRAPHICS<-factor(xxx1$raceses, levels=c(1:4), labels=c("White High SES", "Black High SES", "White Low SES", "Black Low SES"))
+xxx1$SES<-as.factor(xxx1$crudeSESindex)
+xxx1$HIGHSES<-factor(xxx1$highses, levels=c(0:1), labels=c('NO', 'YES'))
+xxx1$c_Time<-xxx1$Time-2
+xxx1$c_Time_sq<-xxx1$c_Time*xxx1$c_Time
+xxx1$TIME <- xxx1$c_Time
+xxx1$TIME_SQUARED<- xxx1$c_Time_sq
+xxx1$SEX <- xxx1$baby_sex
+xxx1$AGE <- scale(xxx1$gest_age, center=TRUE, scale=FALSE)
+xxx1$RACE <- xxx1$momrace
+xxx1$RACE_CAT<-as.factor(xxx1$RACE)
+xxx1$HIGH_SES<-as.numeric(xxx1$highses)
+xxx1$SEX<-xxx1$SEX-1
+xxx1$SESnumber<-as.numeric(xxx1$SES)
+xxx1$SESnumber <- scale(xxx1$SESnumber, center=TRUE, scale=FALSE)
+LongFile<-Long_full
+LongFile$c_Time<-LongFile$Time-1
+LongFile$c_Time_sq<-LongFile$c_Time*LongFile$c_Time
+LongFile$TIME <- LongFile$c_Time
+LongFile$TIME_SQUARED<- LongFile$c_Time_sq
+LongFile$SEX <- LongFile$baby_sex
+LongFile$AGE <- LongFile$gest_age
+LongFile$RACE <- LongFile$momrace
+LongFile$React<-LongFile$Time
+LongFile$React[LongFile$React==1]<--1
+LongFile$React[LongFile$React==2]<-0
+LongFile$React[LongFile$React==3]<-0
+LongFile$Recover<-LongFile$Time
+LongFile$Recover[LongFile$Recover==1]<-0
+LongFile$Recover[LongFile$Recover==2]<-0
+LongFile$Recover[LongFile$Recover==3]<-1
+LongFile$gest_age<-scale(LongFile$gest_age, center=TRUE, scale=FALSE)
+SF<-subset(LongFile, Condition=='SF')
+SSP<-subset(LongFile, Condition=='SSP')
+BlackLongFile<-subset(LongFile, RACE==0)
+WhiteLongFile<-subset(LongFile, RACE==1)
+BlackSF<-subset(SF, RACE==0)
+WhiteSF<-subset(SF, RACE==1)
+BlackSSP<-subset(SSP, RACE==0)
+WhiteSSP<-subset(SSP, RACE==1)
+test<-na.omit(Df.cort)
+test$SSP<-1
+test<-test %>%
+  select("subject", "SSP")
+test_merge<-merge(Wide_full, test, "subject", all=TRUE)
+test_merge$SSP[is.na(test_merge$SSP)] <- 0
+test<-test_merge
+rm(test_merge)
+```
+
+```{r figure 1, echo=FALSE, message=FALSE, warning=FALSE}
+Figure1<-xxx1 %>%
+    mutate(Race=factor(momrace, levels=c(0,1), labels=c("Black", "White"))) %>%
+      ggplot(aes(Time, Cortisol, color=Condition)) + 
+      geom_smooth(position=position_dodge(0.25), se = F) + 
+      stat_summary(fun.data = mean_cl_normal, 
+                   geom = "errorbar", 
+                   fun.args = list(mult = 1),  
+                   position=position_dodge(0.25),
+                   size = 0.5,
+                   width=0.2,
+                   aes(linetype = Condition)) +
+      scale_color_manual(values=wes_palette(name="Moonrise2")) + 
+      scale_fill_manual(values=wes_palette(name="Darjeeling2")) +
+      scale_x_continuous(breaks=(1:3), labels=c("ARRIVAL + 15", "PEAK STRESS + 15", "PEAK STRESS + 45")) + 
+      theme_bw() + 
+      #facet_grid(. ~ Condition) + 
+      ggtitle('Cortisol by Condition') +
+      theme(plot.title = element_text(hjust = 0.5)) +
+      theme(axis.text.x=element_text(angle=45, hjust=1)) +
+      theme(plot.caption=element_text(hjust=0.5)) + 
+      labs(x="Time across Stress Event", y = "Log Transformed Cortisol")
+Figure1
+```
+<!--------------------------->
+
+<!---------IDS Findings 2-------->
+---
+class: center
+# Empirical Support
+## Infant Development Study
+```{r figure 2, echo=FALSE, message=FALSE, warning=FALSE}
+xxx1 %>%
+  filter(Condition=='SSP') %>%
+    mutate(Race=factor(momrace, levels=c(0,1), labels=c("Black", "White"))) %>%
+    filter(Race=='Black') %>%
+    mutate(SES=factor(highses, levels=c(0,1), labels=c("Low SES", "High SES"))) %>%
+    mutate(EOD=if_else(EODworry_sum <= mean(EODworry_sum), 'Low EOD', 'High EOD')) %>%
+      ggplot(aes(Time, Cortisol)) + 
+      geom_smooth(se=F, alpha=0.3, aes(color=EOD), position=position_dodge(0.25)) + 
+      scale_color_manual(values=wes_palette(name="Moonrise2")) + 
+      scale_fill_manual(values=wes_palette(name="Darjeeling2")) +
+      scale_x_continuous(breaks=(1:3), labels=c("ARRIVAL + 15", "PEAK STRESS + 15", "PEAK STRESS + 45")) + 
+      theme_bw() + 
+      theme(legend.position = c(0.8, 0.5)) +  
+      stat_summary(fun.data = mean_cl_normal, 
+                   geom = "errorbar", 
+                   fun.args = list(mult = 1),  
+                   position=position_dodge(0.25),
+                   size = 0.5,
+                   width=0.2,
+                   aes(linetype = EOD, color = EOD)) +
+      theme(plot.title = element_text(hjust = 0.5)) +
+      theme(axis.text.x=element_text(angle=45, hjust=1)) +
+      theme(plot.caption=element_text(hjust=0.5)) +
+      labs(y = "Log Transformed Cortisol", title = "EOD")
+      theme(axis.title.x=element_blank()) + 
+      theme(axis.title.y=element_blank())
+```
+<!--------------------------->
+
+
+<!------Investigation Overview MJTC Dismukes------->
+---
+class: center
+# Empirical Support
+## Overview
+```{r echo = FALSE, out.width = "70%"}
+knitr::include_graphics("images/Overview_MJTC_Dismukes.svg")
+```
+<!------------------------------>
+
+<!---------MJTC Overview-------->
+---
+class: center
+# Empirical Support
+## Mendota Juvenile Treatment Center
+```{r echo = FALSE, out.width = "80%"}
+knitr::include_graphics("images/MJTC_base.svg")
+```
+<!-------------------------------->
+
+<!---------MJTC Dismukes Coupling 1-------->
+---
+class: center
+# Empirical Support
+## Mendota Juvenile Treatment Center
+```{r echo = FALSE, out.width = "80%"}
+knitr::include_graphics("images/MJTC_Dismukes_1.svg")
+```
+<!-------------------------------->
+
+<!---------MJTC Dismukes Coupling 2-------->
+---
+class: center
+# Empirical Support
+## Mendota Juvenile Treatment Center
+```{r echo = FALSE, out.width = "80%"}
+knitr::include_graphics("images/MJTC_Dismukes_2.svg")
+```
+<!-------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-------------------->
+<!---------END-------->
 ---
 
 # Thanks!
@@ -164,3 +535,9 @@ knitr::include_graphics("images/MJTC_2.svg")
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
 
 The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+
+
+
+
+
+
