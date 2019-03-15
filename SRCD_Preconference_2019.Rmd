@@ -1,6 +1,6 @@
 ---
-title: "Evolutionary Developmental Pre-Conference"
-subtitle: "Early Adversity and Life History Strategies"
+title: "Early Adversity and Life History Strategies"
+subtitle: "SRCD 2019"
 author: "Andrew Dismukes"
 affiliation: "The Pennsylvania State University"
 date: "`r Sys.Date()`"
@@ -24,7 +24,7 @@ options(htmltools.dir.version = FALSE)
 ---
 class: center
 # Background & Introduction
-## Purpose:
+## Theme:
 "Research on *life history strategy* and the evolutionary importance of *unpredictable and adverse early environments* on *development*."
 --
 .bottom[
@@ -32,6 +32,7 @@ class: center
 knitr::include_graphics("images/Figure1.png")
 ```
 ]
+
 <!-------------------------------->
 
 <!---------intro to theory-------->
@@ -54,6 +55,8 @@ Del Giudice, M., Ellis, B. J., & Shirtcliff, E. A. (2011). The Adaptive Calibrat
 .font80[
 *"The central concept of the ACM is that information encoded by the SRS in the course of development feeds back on the long-term calibration of the system itself, resulting in adaptive patterns of responsivity and individual differences in life history-related behavior."*
 ]
+???
+ - The Stress response System as an *Engine* for adaptive calibration
 <!------------------------------->
 
 <!---------zoom on theory-------->
@@ -514,7 +517,208 @@ knitr::include_graphics("images/MJTC_Dismukes_2.svg")
 ```
 <!-------------------------------->
 
+<!---------MRI Intro  -------->
+---
+class: center
+# Empirical Support
+## Context for Coupling
+```{r echo = FALSE, out.width = "80%"}
+knitr::include_graphics("images/Overview_MRI_Dismukes.svg")
+```
+<!-------------------------------->
 
+<!---------MRI Overview  -------->
+---
+class: center
+# Empirical Support
+## Context for Coupling
+```{r echo = FALSE, out.width = "60%"}
+knitr::include_graphics("images/Dismukes_PA_blank.svg")
+```
+<!-------------------------------->
+
+<!---------MRI Findings  -------->
+---
+class: center
+# Empirical Support
+## Context for Coupling
+```{r echo = FALSE, out.width = "90%"}
+knitr::include_graphics("images/Dismukes_PA.svg")
+```
+<!-------------------------------->
+
+
+<!---------SOGS Baseline Cort-------->
+---
+class: center
+# Empirical Support
+## Mendota & SOGS: Cortisol
+
+```{r, include=FALSE}
+library(install.load)
+install_load("tidyverse", "psych", "lme4", "lmerTest", "nlme", "xtable", "foreign", "ggthemes", "wesanderson", "forcats", "reshape", "sjPlot")
+setwd("~/SpiderOak Hive/Analysis/Analysis_SOGS_2016_Hormones/Analysis_SOGS/Analysis_SOGS_2016_Hormones/Main_Analysis")
+JAIL_L1 <- read_csv("Databases_SOGS/Hormones_Level1.csv")
+DFL<-JAIL_L1 # Shortens mname of dataset
+DFL$lncort<-log(DFL$cort) + 5
+DFL$lntesto<-log(DFL$testo) 
+DFL$lndhea<-log(DFL$dhea) 
+DFL$Sample3<-DFL$sample1
+DFL$Sample3[DFL$Sample3==1]<-1
+DFL$Sample3[DFL$Sample3==2]<-1.75
+DFL$Sample3[DFL$Sample3==3]<-4.5
+DFL$Sample3[DFL$Sample3==4]<-8
+DFL$Sample3[DFL$Sample3==5]<-12
+CTQ<-read_csv("Databases_SOGS/CTQSA.csv")
+CTQ$PDSS.imp.mean <- ifelse(is.na(CTQ$PDSS), mean(CTQ$PDSS, na.rm=TRUE), CTQ$PDSS)
+CTQ$PDSS<-CTQ$PDSS.imp.mean
+CTQ$PDSS.imp.mean<-NULL
+CTQ$SA<-CTQ$cctqSA
+CTQ$SA[CTQ$SA>0]<-1
+Jail_L2<-read_csv("Databases_SOGS/JAIL_L2.csv")
+ICU<-Jail_L2[, c("ID", "ICUtot_c", "ICUcall_c", "APSD_tot_c", "APSD_cal_c")]
+CTQtemp<-merge(ICU, CTQ, "ID")
+CTQDF<-merge(DFL, CTQtemp, "ID")
+
+# write.csv(CTQDF, "Long_Jail.csv")
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width = "60%"}
+DFL %>%
+  mutate(Sex = factor(Sex, levels=c(1:2), labels=c("Boys", "Girls"))) %>%
+      ggplot(aes(Sample3, lncort, color=Sex)) + 
+      stat_summary(fun.y = mean, 
+                   geom="line", 
+                   size = 2, 
+                   position=position_dodge(0.25)) + 
+      stat_summary(fun.data = mean_cl_normal, 
+                   geom = "errorbar", 
+                   fun.args = list(mult = 1),  
+                   position=position_dodge(0.25),
+                   size = 0.5,
+                   width=0.2,
+                   aes(linetype = Sex)) +  
+      theme_bw() +
+      scale_color_manual(values=wes_palette(name="Moonrise2")) + 
+      scale_fill_manual(values=wes_palette(name="Darjeeling2")) +
+      theme(
+      # axis.ticks = element_blank(), 
+      # axis.text.x = element_blank(), 
+      # axis.title.x = element_blank()) + 
+      # theme(
+      #   panel.grid.major = element_blank(),
+      #   panel.grid.minor = element_blank(),
+      panel.background = element_blank()) + 
+      scale_x_discrete(limits=c(1,1.75,4.5, 8, 12), labels = c('Waking','CAR','Lunch', 'Dinner', 'Bed')) + 
+      theme(axis.text.x=element_text(angle=45, hjust=1, size = 12)) + 
+      theme(axis.title.x = element_text(size = 14)) + labs(x="Time") + 
+      theme(axis.title.y = element_text(size = 14)) + labs(y="Log Transformed Cortisol") + 
+      theme(legend.position = c(0.8, 0.8)) + 
+      theme(legend.text = element_text(size=12 
+                                     ))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+<!--------------------------->
+
+<!---------SOGS Baseline Testosterone-------->
+---
+class: center
+# Empirical Support
+## Mendota & SOGS: Testosterone
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width = "60%"}
+DFL %>%
+  mutate(Sex = factor(Sex, levels=c(1:2), labels=c("Boys", "Girls"))) %>%
+      ggplot(aes(Sample3, lntesto, color=Sex)) + 
+      stat_summary(fun.y = mean, 
+                   geom="line", 
+                   size = 2, 
+                   position=position_dodge(0.25)) + 
+      stat_summary(fun.data = mean_cl_normal, 
+                   geom = "errorbar", 
+                   fun.args = list(mult = 1),  
+                   position=position_dodge(0.25),
+                   size = 0.5,
+                   width=0.2,
+                   aes(linetype = Sex)) +  
+      theme_bw() +
+      scale_color_manual(values=wes_palette(name="Moonrise2")) + 
+      scale_fill_manual(values=wes_palette(name="Darjeeling2")) +
+      theme(
+      # axis.ticks = element_blank(), 
+      # axis.text.x = element_blank(), 
+      # axis.title.x = element_blank()) + 
+      # theme(
+      #   panel.grid.major = element_blank(),
+      #   panel.grid.minor = element_blank(),
+      panel.background = element_blank()) + 
+      scale_x_discrete(limits=c(1,1.75,4.5, 8, 12), labels = c('Waking','CAR','Lunch', 'Dinner', 'Bed')) + 
+      theme(axis.text.x=element_text(angle=45, hjust=1, size = 12)) + 
+      theme(axis.title.x = element_text(size = 14)) + labs(x="Time") + 
+      theme(axis.title.y = element_text(size = 14)) + labs(y="Log Transformed Testosterone")+ 
+      theme(legend.position = c(0.8, 0.8)) + 
+      theme(legend.text = element_text(size=12 
+                                     ))
+```
+
+<!--------------------------->
+
+<!---------SOGS Baseline DHEA-------->
+---
+class: center
+# Empirical Support
+## Mendota & SOGS: DHEA
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width = "60%"}
+DFL %>%
+  mutate(Sex = factor(Sex, levels=c(1:2), labels=c("Boys", "Girls"))) %>%
+      ggplot(aes(Sample3, lndhea, color=Sex)) + 
+      stat_summary(fun.y = mean, 
+                   geom="line", 
+                   size = 2, 
+                   position=position_dodge(0.25)) + 
+      stat_summary(fun.data = mean_cl_normal, 
+                   geom = "errorbar", 
+                   fun.args = list(mult = 1),  
+                   position=position_dodge(0.25),
+                   size = 0.5,
+                   width=0.2,
+                   aes(linetype = Sex)) +  
+      theme_bw() +
+      scale_color_manual(values=wes_palette(name="Moonrise2")) + 
+      scale_fill_manual(values=wes_palette(name="Darjeeling2")) +
+      theme(
+      # axis.ticks = element_blank(), 
+      # axis.text.x = element_blank(), 
+      # axis.title.x = element_blank()) + 
+      # theme(
+      #   panel.grid.major = element_blank(),
+      #   panel.grid.minor = element_blank(),
+      panel.background = element_blank()) + 
+      scale_x_discrete(limits=c(1,1.75,4.5, 8, 12), labels = c('Waking','CAR','Lunch', 'Dinner', 'Bed')) + 
+      theme(axis.text.x=element_text(angle=45, hjust=1, size = 12)) + 
+      theme(axis.title.x = element_text(size = 14)) + labs(x="Time") + 
+      theme(axis.title.y = element_text(size = 14)) + labs(y="Log Transformed DHEA") + 
+      theme(legend.position = c(0.8, 0.8)) + 
+      theme(legend.text = element_text(size=12 
+                                     ))
+```
+
+<!--------------------------->
 
 
 
