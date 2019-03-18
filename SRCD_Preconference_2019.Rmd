@@ -659,21 +659,6 @@ DFL %>%
       theme(legend.position = c(0.8, 0.8)) + 
       theme(legend.text = element_text(size=12 
                                      ))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ```
 ]
 <!--------------------------->
@@ -794,8 +779,10 @@ DFL %>%
 
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
 
-Slides available at: https://andrewdismukes.github.io/Presentations_2019_SRCD_EvoDevoPreconference/SRCD_Preconference_2019.html
-
+Slides available at: 
+.font60[
+https://andrewdismukes.github.io/Presentations_2019_SRCD_EvoDevoPreconference/SRCD_Preconference_2019.html
+]
 
 
 
