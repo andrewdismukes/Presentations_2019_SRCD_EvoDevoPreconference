@@ -572,18 +572,28 @@ knitr::include_graphics("images/Dismukes_PA.svg")
 ```
 <!-------------------------------->
 
-<!---------SOGS Baseline Cort-------->
+<!---------SOGS Baseline-------->
 ---
 class: center
 # Empirical Support
-## Mendota & SOGS: Cortisol
-
+## Mendota & SOGS
 .pull-left[
 ```{r echo = FALSE, out.width = "90%"}
 knitr::include_graphics("images/MJTC_SOGS_base.svg")
 ```
 ]
+<!-------------------------------->
 
+<!---------SOGS Baseline Cort-------->
+---
+class: center
+# Empirical Support
+## Mendota & SOGS
+.pull-left[
+```{r echo = FALSE, out.width = "90%"}
+knitr::include_graphics("images/MJTC_SOGS_base.svg")
+```
+]
 .pull-right[
 ## Cortisol
 
@@ -666,17 +676,21 @@ DFL %>%
 
 ```
 ]
-
-
 <!--------------------------->
 
 <!---------SOGS Baseline Testosterone-------->
 ---
 class: center
 # Empirical Support
-## Mendota & SOGS: Testosterone
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width = "60%"}
+## Mendota & SOGS
+.pull-left[
+```{r echo = FALSE, out.width = "90%"}
+knitr::include_graphics("images/MJTC_SOGS_base.svg")
+```
+]
+.pull-right[
+## Testosterone
+```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width = "90%"}
 DFL %>%
   mutate(Sex = factor(Sex, levels=c(1:2), labels=c("Boys", "Girls"))) %>%
       ggplot(aes(Sample3, lntesto, color=Sex)) + 
@@ -710,16 +724,22 @@ DFL %>%
       theme(legend.text = element_text(size=12 
                                      ))
 ```
-
+]
 <!--------------------------->
 
 <!---------SOGS Baseline DHEA-------->
 ---
 class: center
 # Empirical Support
-## Mendota & SOGS: DHEA
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width = "60%"}
+## Mendota & SOGS
+.pull-left[
+```{r echo = FALSE, out.width = "90%"}
+knitr::include_graphics("images/MJTC_SOGS_base.svg")
+```
+]
+.pull-right[
+## DHEA
+```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width = "90%"}
 DFL %>%
   mutate(Sex = factor(Sex, levels=c(1:2), labels=c("Boys", "Girls"))) %>%
       ggplot(aes(Sample3, lndhea, color=Sex)) + 
@@ -753,7 +773,7 @@ DFL %>%
       theme(legend.text = element_text(size=12 
                                      ))
 ```
-
+]
 <!--------------------------->
 
 
@@ -774,7 +794,8 @@ DFL %>%
 
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
 
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+Slides available at: https://andrewdismukes.github.io/Presentations_2019_SRCD_EvoDevoPreconference/SRCD_Preconference_2019.html
+
 
 
 
