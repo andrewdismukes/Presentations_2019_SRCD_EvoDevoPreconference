@@ -1,12 +1,12 @@
 ---
-title: "Early Adversity and Life History Strategies"
+title: "Early Life Adversity and the Development of the Stress Response System"
 subtitle: "SRCD 2019"
 author: "Andrew Dismukes"
 affiliation: "The Pennsylvania State University"
 date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
-    css: [default, metropolis, metropolis-fonts]
+    css: [default, metropolis, metropolis-fonts, mycss.css]
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -26,12 +26,22 @@ class: center
 # Background & Introduction
 ## Theme:
 "Research on *life history strategy* and the evolutionary importance of *unpredictable and adverse early environments* on *development*."
---
+
 .bottom[
 ```{r echo = FALSE, out.width = "600px"}
 knitr::include_graphics("images/Figure1.png")
 ```
 ]
+
+???
+## Introduction
+- Thank you for the opportunity to be here today. 
+- Thank organizers
+- Post-doc at PSU in GxE lab
+- Theme is "Research on *life history strategy* and the evolutionary importance of *unpredictable and adverse early environments* on *development*."
+- Some Notes:
+  - Talking about a particular research theme that has run through my training *skip*  
+  - Using SRS to represent Life History Theory
 
 <!-------------------------------->
 
@@ -56,7 +66,9 @@ Del Giudice, M., Ellis, B. J., & Shirtcliff, E. A. (2011). The Adaptive Calibrat
 *"The central concept of the ACM is that information encoded by the SRS in the course of development feeds back on the long-term calibration of the system itself, resulting in adaptive patterns of responsivity and individual differences in life history-related behavior."*
 ]
 ???
+ - Many of you will be familir with this figure, from DEl Giu, Ellis & Shirtcliff 
  - The Stress response System as an *Engine* for adaptive calibration
+ - The SRS organizes and adapts to context
 <!------------------------------->
 
 <!---------zoom on theory-------->
@@ -66,9 +78,11 @@ class: center
 ## Theoretical Approach
 .middle[
 ```{r echo = FALSE, out.width = "100%"}
-knitr::include_graphics("images/ACM.png")
+knitr::include_graphics("images/ACM_SRS_highlight.svg")
 ```
 ]
+???
+Worth Taking a Moment to focus on the SRS 
 <!-------------------------------->
 
 <!---------overview of SRS-------->
@@ -97,7 +111,7 @@ class: center
 # Background & Introduction
 ## Theoretical Approach
 ```{r echo = FALSE, out.width = "100%"}
-knitr::include_graphics("images/ACM.png")
+knitr::include_graphics("images/ACM_SRS_Sex_highlight.svg")
 ```
 <!-------------------------------------->
 
@@ -121,24 +135,35 @@ knitr::include_graphics("images/AcrossBetween.svg")
 ```
 <!----------------------------------->
 
-<!---------research questions-------->
+<!---------SRS Adaptation 1-------->
 ---
+class: center
 # Background & Introduction
-.pull-left[
-  .center[
-## What?
- - Type of adversity
-]
-  ]
-.pull-right[
-  .center[
-## When?
- - Infancy
- - Puberty
-]
-  ]
-  
-<!---------------------------------->
+## SRS Adaptation
+```{r echo = FALSE, out.width = "500px"}
+knitr::include_graphics("images/Flow_1.svg")
+```
+<!----------------------------------->
+
+<!---------SRS Adaptation 2-------->
+---
+class: center
+# Background & Introduction
+## SRS Adaptation
+```{r echo = FALSE, out.width = "700px"}
+knitr::include_graphics("images/Flow_2.svg")
+```
+<!----------------------------------->
+
+<!---------SRS Adaptation 2-------->
+---
+class: center
+# Background & Introduction
+## SRS Adaptation
+```{r echo = FALSE, out.width = "700px"}
+knitr::include_graphics("images/Flow_3.svg")
+```
+<!----------------------------------->
 
 <!---------consider behavior-------->
 ---
@@ -547,12 +572,20 @@ knitr::include_graphics("images/Dismukes_PA.svg")
 ```
 <!-------------------------------->
 
-
 <!---------SOGS Baseline Cort-------->
 ---
 class: center
 # Empirical Support
 ## Mendota & SOGS: Cortisol
+
+.pull-left[
+```{r echo = FALSE, out.width = "90%"}
+knitr::include_graphics("images/MJTC_SOGS_base.svg")
+```
+]
+
+.pull-right[
+## Cortisol
 
 ```{r, include=FALSE}
 library(install.load)
@@ -583,7 +616,7 @@ CTQDF<-merge(DFL, CTQtemp, "ID")
 # write.csv(CTQDF, "Long_Jail.csv")
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width = "60%"}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width = "90%"}
 DFL %>%
   mutate(Sex = factor(Sex, levels=c(1:2), labels=c("Boys", "Girls"))) %>%
       ggplot(aes(Sample3, lncort, color=Sex)) + 
@@ -632,6 +665,9 @@ DFL %>%
 
 
 ```
+]
+
+
 <!--------------------------->
 
 <!---------SOGS Baseline Testosterone-------->
