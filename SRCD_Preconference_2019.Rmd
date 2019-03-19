@@ -807,35 +807,28 @@ DFL %>%
 ]
 <!--------------------------->
 
+<!---------SOGS Baseline DHEA-------->
+---
+class: center
+# Empirical Support
+## Mendota & SOGS
 
+<!--------------------------->
 
-
-
-
-
-
-
-
-
-<!-------------------->
 <!---------END-------->
 ---
 
 # Thanks!
-
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
 
 Slides available at: 
 .font60[
 https://andrewdismukes.github.io/Presentations_2019_SRCD_EvoDevoPreconference/SRCD_Preconference_2019.html
 ]
 
-
 ## Special thanks to
  - Elizabeth Shirtcliff & SPIT Lab at Iowa State
  - Stacy Drury & Behavioral and Neurodevelopmental Genetics Lab at Tulane
-
  - Jenae Neiderhiser and Gene Environment Interplay Lab at Penn State
 
-
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
 
