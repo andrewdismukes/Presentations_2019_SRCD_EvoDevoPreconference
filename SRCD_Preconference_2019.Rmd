@@ -100,7 +100,7 @@ knitr::include_graphics("images/SRS1.svg")
 class: center
 # Background & Introduction
 ## SRS: The HPA Axis
-```{r echo = FALSE, out.width = "700px"}
+```{r echo = FALSE, out.width = "70%"}
 knitr::include_graphics("images/HPA.svg")
 ```
 <!----------------------------------->
@@ -120,19 +120,21 @@ knitr::include_graphics("images/ACM_SRS_Sex_highlight.svg")
 class: center
 # Background & Introduction
 ## SRS: Beyond The HPA Axis
-```{r echo = FALSE, out.width = "700px"}
-knitr::include_graphics("images/SRS_HPA_SexHormones.svg")
+```{r echo = FALSE, out.width = "90%"}
+knitr::include_graphics("images/HPA-HPG-flow.svg")
 ```
 <!--------------------------------------------------->
 
 <!---------sex and stress hormone interaction-------->
 ---
-class: center
+class: center, bottom
 # Background & Introduction
 ## SRS: Beyond The HPA Axis
+
 ```{r echo = FALSE, out.width = "700px"}
 knitr::include_graphics("images/AcrossBetween.svg")
 ```
+
 <!----------------------------------->
 
 <!---------SRS Adaptation 1-------->
@@ -140,9 +142,11 @@ knitr::include_graphics("images/AcrossBetween.svg")
 class: center
 # Background & Introduction
 ## SRS Adaptation
-```{r echo = FALSE, out.width = "500px"}
-knitr::include_graphics("images/Flow_1.svg")
+.bottom[
+```{r echo = FALSE, out.width = "700px"}
+knitr::include_graphics("images/HPA-HPG-flow.svg")
 ```
+]
 <!----------------------------------->
 
 <!---------SRS Adaptation 2-------->
@@ -151,19 +155,50 @@ class: center
 # Background & Introduction
 ## SRS Adaptation
 ```{r echo = FALSE, out.width = "700px"}
-knitr::include_graphics("images/Flow_2.svg")
+knitr::include_graphics("images/HPA-HPG-flow2a.svg")
 ```
 <!----------------------------------->
 
-<!---------SRS Adaptation 2-------->
+<!---------SRS Adaptation 3-------->
 ---
 class: center
 # Background & Introduction
 ## SRS Adaptation
 ```{r echo = FALSE, out.width = "700px"}
-knitr::include_graphics("images/Flow_3.svg")
+knitr::include_graphics("images/HPA-HPG-flow2b.svg")
 ```
 <!----------------------------------->
+
+<!---------SRS Adaptation 4-------->
+---
+class: center
+# Background & Introduction
+## SRS Adaptation
+```{r echo = FALSE, out.width = "700px"}
+knitr::include_graphics("images/HPA-HPG-flow2c.svg")
+```
+<!----------------------------------->
+
+<!---------SRS Adaptation 5-------->
+---
+class: center
+# Background & Introduction
+## SRS Adaptation
+```{r echo = FALSE, out.width = "700px"}
+knitr::include_graphics("images/HPA-HPG-flow2d.svg")
+```
+<!----------------------------------->
+
+<!---------SRS Adaptation 6-------->
+---
+class: center
+# Background & Introduction
+## SRS Adaptation
+```{r echo = FALSE, out.width = "700px"}
+knitr::include_graphics("images/HPA-HPG-flow2e.svg")
+```
+<!----------------------------------->
+
 
 <!---------consider behavior-------->
 ---
@@ -572,6 +607,17 @@ knitr::include_graphics("images/Dismukes_PA.svg")
 ```
 <!-------------------------------->
 
+<!---------MJ & SOGS Overview  -------->
+---
+class: center
+# Mendota & SOGS
+## Context for Coupling
+```{r echo = FALSE, out.width = "60%"}
+knitr::include_graphics("images/Overview_MJTC_SOGS.svg")
+```
+<!-------------------------------->
+
+
 <!---------SOGS Baseline-------->
 ---
 class: center
@@ -788,8 +834,8 @@ https://andrewdismukes.github.io/Presentations_2019_SRCD_EvoDevoPreconference/SR
 ## Special thanks to
  - Elizabeth Shirtcliff & SPIT Lab at Iowa State
  - Stacy Drury & Behavioral and Neurodevelopmental Genetics Lab at Tulane
- - Jenae Neiderhiser and Gene Environment Interplay Lab at Penn State
 
+ - Jenae Neiderhiser and Gene Environment Interplay Lab at Penn State
 
 
 
