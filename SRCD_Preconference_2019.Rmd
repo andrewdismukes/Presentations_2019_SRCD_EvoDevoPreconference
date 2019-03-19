@@ -785,6 +785,10 @@ https://andrewdismukes.github.io/Presentations_2019_SRCD_EvoDevoPreconference/SR
 ]
 
 
+## Special thanks to
+ - Elizabeth Shirtcliff & SPIT Lab at Iowa State
+ - Stacy Drury & Behavioral and Neurodevelopmental Genetics Lab at Tulane
+ - Jenae Neiderhiser and Gene Environment Interplay Lab at Penn State
 
 
 
