@@ -298,6 +298,20 @@ knitr::include_graphics("images/MJTC_2.svg")
 ```
 <!--------------------------------------->
 
+<!---------MJTC Gostisha Discussion-------->
+---
+class: center
+# Empirical Support
+## Mendota Juvenile Treatment Center
+.left[
+### Conclusions
+ - We found low waking cortisol in boys with high CU traits and an abuse history
+ - boys with higher CU traits as well as boys with greater life stress exposure had flat diurnal rhythms
+ - boys elevated on both CU traits and life stress exposure consistently displayed the steepest diurnal rhythms
+ - *incarcerated adolescent boys with greater life stress or CU traits had similar functioning of the HPA axis, and boys elevated on both prior stress and CU traits had a unique HPA profile.*
+ ]
+<!-------------------------------->
+
 <!------Investigation Overview IDS------->
 ---
 class: center
@@ -306,6 +320,7 @@ class: center
 ```{r echo = FALSE, out.width = "70%"}
 knitr::include_graphics("images/Overview_IDS.svg")
 ```
+
 <!------------------------------>
 
 <!------Introduce IDS------->
@@ -475,7 +490,7 @@ test<-test_merge
 rm(test_merge)
 ```
 
-```{r figure 1, echo=FALSE, message=FALSE, warning=FALSE}
+```{r figure 1, echo=FALSE, message=FALSE, warning=FALSE, out.width = "50%"}
 Figure1<-xxx1 %>%
     mutate(Race=factor(momrace, levels=c(0,1), labels=c("Black", "White"))) %>%
       ggplot(aes(Time, Cortisol, color=Condition)) + 
@@ -499,6 +514,9 @@ Figure1<-xxx1 %>%
       labs(x="Time across Stress Event", y = "Log Transformed Cortisol")
 Figure1
 ```
+
+.left[.font60[Dismukes, A., Shirtcliff, E., Jones, C. W., Zeanah, C., Theall, K., & Drury, S. (2018). The development of the cortisol response to dyadic stressors in Black and White infants. Development and Psychopathology, 30(5), 1995–2008. https://doi.org/10.1017/S0954579418001232
+]]
 <!--------------------------->
 
 <!---------IDS Findings 2-------->
@@ -534,7 +552,20 @@ xxx1 %>%
       theme(axis.title.x=element_blank()) + 
       theme(axis.title.y=element_blank())
 ```
+
+
 <!--------------------------->
+
+<!---------IDS Discussion-------->
+---
+class: center
+# Empirical Support
+## Infant Development Study
+### Conclusions
+.left[
+ - higher maternal report of worry related to discrimination was associated with significantly higher cortisol levels suggesting a cross-generational impact of discrimination on infant physiology.
+ ]
+<!-------------------------------->
 
 
 <!------Investigation Overview MJTC Dismukes------->
@@ -565,6 +596,7 @@ class: center
 ```{r echo = FALSE, out.width = "80%"}
 knitr::include_graphics("images/MJTC_Dismukes_1.svg")
 ```
+
 <!-------------------------------->
 
 <!---------MJTC Dismukes Coupling 2-------->
@@ -575,6 +607,25 @@ class: center
 ```{r echo = FALSE, out.width = "80%"}
 knitr::include_graphics("images/MJTC_Dismukes_2.svg")
 ```
+<!-------------------------------->
+
+<!---------MJTC Gostisha Discussion-------->
+---
+class: center
+# Empirical Support
+## Mendota Juvenile Treatment Center
+.left[.font80[
+### Conclusions
+- Incarceration is:
+ - Stable, but stressful
+ - status oriented
+ - filled with competition, challenge, and violence
+- *prison is a context where mechanistically it makes sense for both sex and stress hormones to be activated, jointly contributing to the best adaptive functioning of the individual for that setting.*
+ 
+- ELA influences both the HPG and HPA
+  - faster life history strategy with advanced maturation of HPG
+- Johnson and colleagues found increased coupling of the HPA and HPG axes within this same population, in the context of elevated interpersonal psychopathy symptoms; the authors interpret this finding as being indicative of high social dominance and manipulative traits, with the HPG recruiting the HPA 
+]]
 <!-------------------------------->
 
 <!---------MRI Intro  -------->
@@ -813,6 +864,11 @@ class: center
 # Empirical Support
 ## Mendota & SOGS
 
+<!--------------------------->
+
+<!---------END-------->
+class: center
+# Conclusions
 <!--------------------------->
 
 <!---------END-------->
