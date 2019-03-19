@@ -38,6 +38,8 @@ knitr::include_graphics("images/Figure1.png")
 - Thank you for the opportunity to be here today. 
 - Thank organizers
 - Post-doc at PSU in GxE lab
+- Did graduate work with Birdie Shirtcliff and Stacy Drury
+- Much of this is indebted to Birdie
 - Theme is "Research on *life history strategy* and the evolutionary importance of *unpredictable and adverse early environments* on *development*."
 - Some Notes:
   - Talking about a particular research theme that has run through my training *skip*  
@@ -50,7 +52,7 @@ knitr::include_graphics("images/Figure1.png")
 class: center
 # Background & Introduction
 ## Theoretical Approach
---
+
 .center[
 ```{r echo = FALSE, out.width = "70%"}
 knitr::include_graphics("images/ACM.png")
@@ -61,14 +63,18 @@ knitr::include_graphics("images/ACM.png")
 Del Giudice, M., Ellis, B. J., & Shirtcliff, E. A. (2011). The Adaptive Calibration Model of stress responsivity. Neurosci. Biobehav. Rev., 35(7), 1562–1592. https://doi.org/10.1016/j.neubiorev.2010.11.007
 ]
   ]
+???
+## Introduce SRS integration figure
+ - Many of you will be familiar with this figure, from Del Giu, Ellis & Shirtcliff 
+ - use this as framework for interpreting some results
+ - The Stress response System as an *Engine* for adaptive calibration
+ - The SRS organizes and adapts to context
+ - There are a couple of important things to focus on here,from this broad vantage point
 --
 .font80[
 *"The central concept of the ACM is that information encoded by the SRS in the course of development feeds back on the long-term calibration of the system itself, resulting in adaptive patterns of responsivity and individual differences in life history-related behavior."*
 ]
-???
- - Many of you will be familir with this figure, from DEl Giu, Ellis & Shirtcliff 
- - The Stress response System as an *Engine* for adaptive calibration
- - The SRS organizes and adapts to context
+
 <!------------------------------->
 
 <!---------zoom on theory-------->
@@ -82,7 +88,7 @@ knitr::include_graphics("images/ACM_SRS_highlight.svg")
 ```
 ]
 ???
-Worth Taking a Moment to focus on the SRS 
+Worth Taking a Moment to focus on the SRS and define our terms
 <!-------------------------------->
 
 <!---------overview of SRS-------->
@@ -92,7 +98,10 @@ class: center
 ## Components of the Stress Response System
 ```{r echo = FALSE, out.width = "70%"}
 knitr::include_graphics("images/SRS1.svg")
-```
+```  
+
+
+ 
 <!----------------------------->
 
 <!---------focus on HPA-------->
@@ -103,6 +112,8 @@ class: center
 ```{r echo = FALSE, out.width = "70%"}
 knitr::include_graphics("images/HPA.svg")
 ```
+???
+As many of you know, The HPA axis is a biochemical cascade blah, blah, blah...
 <!----------------------------------->
 
 <!---------reminder of theory-------->
@@ -113,6 +124,10 @@ class: center
 ```{r echo = FALSE, out.width = "100%"}
 knitr::include_graphics("images/ACM_SRS_Sex_highlight.svg")
 ```
+???
+ - When it comes to neuroendocrine markers, the HPA is not the extent of the story
+ - recent work highlights the role of sex steroids
+ - these have come to play a more and more prominent role and so I wil highlight sex steroid contributions
 <!-------------------------------------->
 
 <!---------focus on sex hormones-------->
@@ -123,6 +138,10 @@ class: center
 ```{r echo = FALSE, out.width = "90%"}
 knitr::include_graphics("images/HPA-HPG-flow.svg")
 ```
+???
+- For the purposes of this talk I will consider HPG as a "tunable"" compoenet of the engine that is adaptive calibration
+- present some data to justify this choice later
+- builds from the way sex steriods are considered in ACM
 <!--------------------------------------------------->
 
 <!---------sex and stress hormone interaction-------->
@@ -134,7 +153,16 @@ class: center, bottom
 ```{r echo = FALSE, out.width = "700px"}
 knitr::include_graphics("images/AcrossBetween.svg")
 ```
-
+??? 
+ - Worth considering these axes in parallel
+ - describe cort
+  - primarily secreted by adrena cortex
+ -testo
+  - primarily secreted by gonads and ovaries
+ -dhea
+  - product of both
+  - prohormone
+  exists as DHEA-s
 <!----------------------------------->
 
 <!---------SRS Adaptation 1-------->
@@ -147,6 +175,10 @@ class: center
 knitr::include_graphics("images/HPA-HPG-flow.svg")
 ```
 ]
+???
+ - I've been defining the SRS in terms of these measurable quantities
+ - at the level of analysis of the biomarker
+ - from the info I have available this IS the SRS *skip*
 <!----------------------------------->
 
 <!---------SRS Adaptation 2-------->
@@ -157,6 +189,10 @@ class: center
 ```{r echo = FALSE, out.width = "700px"}
 knitr::include_graphics("images/HPA-HPG-flow2a.svg")
 ```
+
+???
+ - But, all models are lies, some are just more useful
+ - We know this thing which I have drawn in neat boxes is highly malleable and messy
 <!----------------------------------->
 
 <!---------SRS Adaptation 3-------->
@@ -167,6 +203,10 @@ class: center
 ```{r echo = FALSE, out.width = "700px"}
 knitr::include_graphics("images/HPA-HPG-flow2b.svg")
 ```
+???
+ - Good to dwell a minute on the mess
+ - So much of what I am talking about is the interaction of genetics and environment
+ 
 <!----------------------------------->
 
 <!---------SRS Adaptation 4-------->
@@ -177,6 +217,10 @@ class: center
 ```{r echo = FALSE, out.width = "700px"}
 knitr::include_graphics("images/HPA-HPG-flow2c.svg")
 ```
+???
+ - On a molecular genetics level this is hugely complicated, at it's simplest we are considering
+ - Even within epigenetics a huge mess
+    - what is epigenetics?
 <!----------------------------------->
 
 <!---------SRS Adaptation 5-------->
@@ -187,6 +231,10 @@ class: center
 ```{r echo = FALSE, out.width = "700px"}
 knitr::include_graphics("images/HPA-HPG-flow2d.svg")
 ```
+
+??? 
+ - these levers operate ynergistically with multiple components of the environment
+ - so this is wrong, but at least it is symettrically wrong and conveys the point of *skip*
 <!----------------------------------->
 
 <!---------SRS Adaptation 6-------->
@@ -197,6 +245,10 @@ class: center
 ```{r echo = FALSE, out.width = "700px"}
 knitr::include_graphics("images/HPA-HPG-flow2e.svg")
 ```
+??? 
+ - Neighborhoods to nucleotides, or something like that. 
+ - adaptive calibration has important levers, information is integrated across multiple levels
+ - is not static but developmentally mediated
 <!----------------------------------->
 
 
@@ -658,6 +710,19 @@ knitr::include_graphics("images/Dismukes_PA.svg")
 ```
 <!-------------------------------->
 
+
+<!---------MRI Findings  -------->
+---
+class: center
+# Empirical Support
+## Context for Coupling
+.left[
+ - The HPA and HPG axes were positively coupled
+  - more so in an environment of **stress** and **challenge**
+ - The effect of life stress exposure on the lab day was largely non-significant. 
+ ]
+<!-------------------------------->
+
 <!---------MJ & SOGS Overview  -------->
 ---
 class: center
@@ -856,19 +921,6 @@ DFL %>%
                                      ))
 ```
 ]
-<!--------------------------->
-
-<!---------SOGS Baseline DHEA-------->
----
-class: center
-# Empirical Support
-## Mendota & SOGS
-
-<!--------------------------->
-
-<!---------END-------->
-class: center
-# Conclusions
 <!--------------------------->
 
 <!---------END-------->
