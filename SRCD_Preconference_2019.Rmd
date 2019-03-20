@@ -356,7 +356,7 @@ class: center
 # Empirical Support
 ## Mendota Juvenile Treatment Center
 .left[
-### Conclusions
+### Discussion
  - We found low waking cortisol in boys with high CU traits and an abuse history
  - boys with higher CU traits as well as boys with greater life stress exposure had flat diurnal rhythms
  - boys elevated on both CU traits and life stress exposure consistently displayed the steepest diurnal rhythms
@@ -613,7 +613,7 @@ xxx1 %>%
 class: center
 # Empirical Support
 ## Infant Development Study
-### Conclusions
+### Discussion
 .left[
  - higher maternal report of worry related to discrimination was associated with significantly higher cortisol levels suggesting a cross-generational impact of discrimination on infant physiology.
  ]
@@ -667,7 +667,7 @@ class: center
 # Empirical Support
 ## Mendota Juvenile Treatment Center
 .left[.font80[
-### Conclusions
+### Discussion
 - Incarceration is:
  - Stable, but stressful
  - status oriented
@@ -715,7 +715,7 @@ knitr::include_graphics("images/Dismukes_PA.svg")
 ---
 class: center
 # Empirical Support
-## Context for Coupling
+## Discussion
 .left[
  - The HPA and HPG axes were positively coupled
   - more so in an environment of **stress** and **challenge**
@@ -928,7 +928,16 @@ DFL %>%
 ```
 ]
 <!--------------------------->
+<!---------Conclusions-------->
+---
+# Conclusions
+.pull-left[
+- importance of HPG
+- importance of timing 
+- kind of ELA
+- importance of context
 
+]
 <!---------END-------->
 ---
 
